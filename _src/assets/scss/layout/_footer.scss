@@ -1,0 +1,15 @@
+.footer {
+    height: 128px;
+    width: 100%;
+    background-color: $dark-grey-blue;
+    @include text-footer();
+    margin: 0 auto;
+    padding-top: 38px;
+    padding-bottom: 30px;
+    position: fixed;
+    bottom: 0;
+
+    &span{
+        @include heart();
+    }
+}
