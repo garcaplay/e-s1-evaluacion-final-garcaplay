@@ -18,21 +18,40 @@
     position: relative;
     
     .hero--text {
-        width: 600px;
-        @include text-style;
-        color: $white;
+        width: 290px;
         position: absolute;
         bottom: 143px;
         left: 50%;
         transform: translateX(-50%);
 
+        @media all and (min-width: 768px){
+            width: 600px;
+        }
+
         @media all and (min-width: 1280px){
             width: 700px;
+        }
 
-            & p {
-                @include paragraph-hero();
-                margin: 0;
+        & h1{
+            @include text-style();
+            color: $white;
+
+            @media all and (min-width: 768px){
+                @include main-header---tablet();
             }
+        }
+
+        & p{
+            @include category---desktop();
+            line-height: normal;
+            color: $white;
+            text-align: center;
+            margin: 0;
+
+            @media all and (min-width: 768px){
+                @include paragraph-hero();
+            }
+            
         }
         
         & h1{
