@@ -190,6 +190,11 @@
         transform: translate(-50%, -50%);
     }
 
+    @media all and (min-width: 1280px){
+        top: 787px;
+        transform: translate(-50%, -50%);
+    }
+
     .main--upbtn{
         width: 20.6px;
         height: 24px;
