@@ -30,7 +30,6 @@
         border-radius: 22.5px;
         border: solid 2px $bright-orange;
         text-align: center;
-        vertical-align: middle;
 
         & a{
             @include button-text---mobile();
@@ -78,13 +77,11 @@
         align-items: center;
 
         @media all and (min-width: 768px){
-            width: 213px;
+            width: 100%;
             display: grid;
-            grid-template-columns: 213px 213px 213px;
+            grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: 1fr 45px; 
             grid-gap: 60px 30px;
-            // no consigo que se sitúe en el centro bien, sin truco
-            transform: translateX(-110%);
 
             & .main--reasons-grid4{
                 grid-row: 2 / 3;
@@ -98,16 +95,21 @@
             text-align: center;
             margin-bottom: 45px;
 
-            @media all and (min-width: 768px){
-                
-            }
-
             & h3{
                 margin:0;
+
+                @media all and (min-width: 768px){
+                    margin-bottom: 14px;
+                }
             }
 
             & p{
                 margin: 0;
+
+                @media all and (min-width: 768px){
+                    width: 213px;
+                    margin: auto;
+                }
             }
 
             .main--reasons-btn{
@@ -116,7 +118,6 @@
                 border-radius: 22.5px;
                 background-color: $bright-orange;
                 @include button-text---white();
-                // falta situar el texto en el centro con una general de -btn-text
                 transform: translateY(100%);
             }
 
