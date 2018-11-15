@@ -164,7 +164,6 @@
         @include button-text---white();
         position: absolute;
         bottom: 60px;
-        transform: translateX(-50%);
 
         @media all and (min-width: 1280px){
             width: 255px;
