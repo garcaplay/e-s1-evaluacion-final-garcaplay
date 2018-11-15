@@ -7,11 +7,11 @@
     height: 44px;
     padding: 0;
     border: 0;
-    background: url("/assets/images/ico-menu.svg") center no-repeat $cerulean;
+    background: url("../images/ico-menu.svg") center no-repeat $cerulean;
 }
 
 .hero{
-    background: url(../images/cover.jpg) center center no-repeat;
+    background: url("../images/cover.jpg") center center no-repeat;
     background-size: cover;
     height: 100vh;
     padding: 0 15px;
@@ -25,9 +25,23 @@
         bottom: 143px;
         left: 50%;
         transform: translateX(-50%);
+
+        @media all and (min-width: 1280px){
+            width: 700px;
+
+            & p {
+                @include paragraph-hero();
+                margin: 0;
+            }
+        }
         
         & h1{
             text-transform: uppercase;
+
+            @media all and (min-width: 1280px){
+                @include main-header---desktop();
+                margin: 0;
+            }
         }
 
     }

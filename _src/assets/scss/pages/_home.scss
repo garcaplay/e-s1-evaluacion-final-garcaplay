@@ -10,18 +10,44 @@
     flex-flow: column;
     justify-content: space-between;
 
+    @media all and (min-width: 768px){
+        height: 330px;
+        padding: 30px 39px 45px;  
+      }
+
+    @media all and (min-width: 1280px){
+        height: 360px;
+        width: 730px;
+        padding-top:60px; 
+        padding-bottom: 60px;
+        margin: 0 auto; 
+    }
+
     & h6{
-        margin-top: 0;
+        margin: 0;
         @include category();
+
+        @media all and (min-width: 1280px){
+            @include category---desktop(); 
+        }
     }
  
     & h2{
+        margin: 0;
         @include header-section---mobile();
         text-transform: capitalize;
+
+        @media all and (min-width: 1280px){
+            @include header-section---desktop(); 
+        }
     }
 
     & p{
         @include paragraph---mobile();
+
+        @media all and (min-width: 1280px){
+            @include paragraph-section---tablet(); 
+        }
     }
 
     .main--description-btn{
@@ -39,11 +65,10 @@
         @media all and (min-width: 768px){
             width: 91px;  
         }
-    }
 
-    @media all and (min-width: 768px){
-      height: 330px;
-      padding: 30px 39px 45px;  
+        @media all and (min-width: 1280px){
+            width: 160px;  
+        }
     }
 }
 
@@ -59,22 +84,32 @@
         height: 397px;
     }
 
+    @media all and (min-width: 1280px){
+        height: 427px;
+        padding: 60px 0 60px;
+    }
+
     & h2{
         @include header-section---mobile();
         text-transform: capitalize;
         text-align: center;
         margin-top: 0;
-        margin-bottom:45px
+        margin-bottom:45px;
         // mirar como se puede hacer esto con nth-last-child
+        @media all and (min-width: 1280px){
+            @include header-section---desktop()
+        }
     }
 
     .main--reasons-grid{
         width: 180px;
+        max-width: 690px;
         padding: 0 ;
         display: flex;
         flex-flow: column nowrap;
         justify-content: space-between;
         align-items: center;
+        margin: 0 auto;
 
         @media all and (min-width: 768px){
             width: 100%;
@@ -90,25 +125,34 @@
             }
         }
 
+        @media all and (min-width: 1280px){
+
+        }
+
         & li{
             list-style: none;
-            text-align: center;
             margin-bottom: 45px;
 
             & h3{
                 margin:0;
+                @include subtitle-section---mobile();
 
                 @media all and (min-width: 768px){
                     margin-bottom: 14px;
+                    @include header-section---mobile();
+                    text-align: center;
+                    color: $black;
                 }
             }
 
             & p{
                 margin: 0;
+                @include paragraph-2---mobile();
 
                 @media all and (min-width: 768px){
                     width: 213px;
                     margin: auto;
+                    @include paragraph-2---tablet();
                 }
             }
 
@@ -119,6 +163,11 @@
                 background-color: $bright-orange;
                 @include button-text---white();
                 transform: translateY(100%);
+
+                @media all and (min-width: 1280px){
+                    width: 255px;
+                    transform: translateY(0%);
+                }
             }
 
         }
