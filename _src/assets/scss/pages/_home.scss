@@ -38,6 +38,10 @@
         @include header-section---mobile();
         text-transform: capitalize;
 
+        @media all and (min-width: 768px){
+            @include header-section---tablet(); 
+        }
+
         @media all and (min-width: 1280px){
             @include header-section---desktop(); 
         }
@@ -46,7 +50,7 @@
     & p{
         @include paragraph---mobile();
 
-        @media all and (min-width: 1280px){
+        @media all and (min-width: 768px){
             @include paragraph-section---tablet(); 
         }
     }
@@ -58,17 +62,18 @@
         border: solid 2px $bright-orange;
         text-align: center;
 
-        & a{
-            @include button-text---mobile();
-            text-decoration: none;
-        }
-
         @media all and (min-width: 768px){
             width: 91px;  
         }
 
         @media all and (min-width: 1280px){
             width: 160px;  
+        }
+
+        & a{
+            @include button-text---mobile();
+            text-decoration: none;
+            line-height: 40px;
         }
     }
 }
@@ -98,8 +103,13 @@
         margin-top: 0;
         margin-bottom:45px;
         // mirar como se puede hacer esto con nth-last-child
+
+        @media all and (min-width: 768px){
+            @include header-section---tablet();
+        }
+
         @media all and (min-width: 1280px){
-            @include header-section---desktop()
+            @include header-section---desktop();
         }
     }
 
@@ -135,9 +145,6 @@
 
                 @media all and (min-width: 768px){
                     margin-bottom: 14px;
-                    @include header-section---mobile();
-                    text-align: center;
-                    color: $black;
                 }
             }
 
@@ -151,7 +158,6 @@
                     @include paragraph-2---tablet();
                 }
             }
-
         }
     }
 
