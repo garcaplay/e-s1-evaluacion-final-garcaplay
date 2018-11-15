@@ -1,0 +1,41 @@
+.main {
+    
+   background-color: pink; 
+   padding: 30px 15px 60px; 
+}
+
+.main--description{
+    margin-bottom: 45px;
+    
+    & h6{
+        margin: 0;
+        @include category();
+    }
+ 
+    & h2{
+        @include header-section---mobile();
+        text-transform: capitalize;
+        margin-top: 1px;
+        margin-bottom: 15px;
+    }
+
+    & p{
+        @include paragraph---mobile();
+        margin-top: 0px;
+        margin-bottom: 30px;
+    }
+
+    & a{
+        @include button-text---mobile();
+        text-decoration: none;
+    }
+}
+
+.main--description-btn{
+    height: 45px;
+    width: 76px;
+    border-radius: 22px;
+    border: solid 2px $bright-orange;
+    padding: 0 25px;
+}
+
