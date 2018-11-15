@@ -4,7 +4,9 @@
 
 .main--description{
     padding: 30px 15px 45px;
+    margin: 0 auto;
     height: 376px;
+    max-width: 730px;
     background-color: $white;
     display: flex;
     flex-flow: column;
@@ -17,7 +19,6 @@
 
     @media all and (min-width: 1280px){
         height: 360px;
-        width: 730px;
         padding-top:60px; 
         padding-bottom: 60px;
         margin: 0 auto; 
@@ -158,6 +159,7 @@
         width: 184px;
         height: 45px;
         border-radius: 22.5px;
+        border: 0px;
         background-color: $bright-orange;
         @include button-text---white();
         position: absolute;
