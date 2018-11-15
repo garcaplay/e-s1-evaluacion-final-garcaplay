@@ -79,6 +79,7 @@
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    position: relative;
     
     @media all and (min-width: 768px){
         height: 397px;
@@ -115,23 +116,17 @@
             width: 100%;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 45px; 
-            grid-gap: 60px 30px;
-
-            & .main--reasons-grid4{
-                grid-row: 2 / 3;
-                grid-column: 2 / 3;
-                transform: translateY(-50%);
-            }
-        }
-
-        @media all and (min-width: 1280px){
-
+            grid-template-rows: 1fr; 
+            grid-gap: 0px 30px;
         }
 
         & li{
             list-style: none;
             margin-bottom: 45px;
+
+            @media all and (min-width: 1280px){
+                margin-bottom: 60px;
+            }
 
             & h3{
                 margin:0;
@@ -156,20 +151,21 @@
                 }
             }
 
-            .main--reasons-btn{
-                width: 184px;
-                height: 45px;
-                border-radius: 22.5px;
-                background-color: $bright-orange;
-                @include button-text---white();
-                transform: translateY(100%);
+        }
+    }
 
-                @media all and (min-width: 1280px){
-                    width: 255px;
-                    transform: translateY(0%);
-                }
-            }
+    .main--reasons-btn{
+        width: 184px;
+        height: 45px;
+        border-radius: 22.5px;
+        background-color: $bright-orange;
+        @include button-text---white();
+        position: absolute;
+        bottom: 60px;
+        transform: translateX(-50%);
 
+        @media all and (min-width: 1280px){
+            width: 255px;
         }
     }
 }
