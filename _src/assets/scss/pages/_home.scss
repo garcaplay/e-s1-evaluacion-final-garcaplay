@@ -1,15 +1,11 @@
 .main {
-    
-   background-color: pink; 
-   padding: 0px 15px 0px;
    position: relative; 
 }
 
 .main--description{
+    padding: 30px 15px 45px;
     height: 376px;
     background-color: $white;
-    padding-top: 30px;
-    padding-bottom: 45px;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
@@ -28,27 +24,39 @@
         @include paragraph---mobile();
     }
 
-    & a{
-        @include button-text---mobile();
-        text-decoration: none;
-    }
-
     .main--description-btn{
         height: 45px;
         width: 76px;
         border-radius: 22.5px;
         border: solid 2px $bright-orange;
-        padding: 0 25px;
+
+        & a{
+            @include button-text---mobile();
+            text-decoration: none;
+        }
+
+        @media all and (min-width: 768px){
+            width: 91px;  
+        }
+    }
+
+    @media all and (min-width: 768px){
+      height: 330px;
+      padding: 30px 39px 45px;  
     }
 }
 
 .main--reasons{
     height: 624px;
     background-color: $light-blue;
-    padding: 30px 0 60px 0;
+    padding: 30px 15px 60px 15px;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    
+    @media all and (min-width: 768px){
+        height: 397px;
+    }
 
     & h2{
         @include header-section---mobile();
@@ -67,10 +75,30 @@
         justify-content: space-between;
         align-items: center;
 
+        @media all and (min-width: 768px){
+            width: 213px;
+            display: grid;
+            grid-template-columns: 213px 213px 213px;
+            grid-template-rows: 1fr 45px; 
+            grid-gap: 60px 30px;
+            // no consigo que se sitúe en el centro bien, sin truco
+            transform: translateX(-110%);
+
+            & .main--reasons-grid4{
+                grid-row: 2 / 3;
+                grid-column: 2 / 3;
+                transform: translateY(-50%);
+            }
+        }
+
         & li{
             list-style: none;
             text-align: center;
             margin-bottom: 45px;
+
+            @media all and (min-width: 768px){
+                
+            }
 
             & h3{
                 margin:0;
@@ -86,12 +114,11 @@
                 border-radius: 22.5px;
                 background-color: $bright-orange;
                 @include button-text---white();
-                // falta situar el texto en el centro
+                // falta situar el texto en el centro con una general de -btn-text
                 transform: translateY(100%);
             }
 
         }
-
     }
 }
 
@@ -109,6 +136,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media all and (min-width: 768px){
+        top: 727px;
+        transform: translate(-50%, -50%);
+    }
 
     .main--upbtn{
         width: 20.6px;
