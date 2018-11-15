@@ -1,0 +1,49 @@
+@import '../core/mixins';
+.header {
+    height: 100vh;
+    margin: 0;
+}
+.menu--btn{
+    width: 44px;
+    height: 44px;
+    background-color: $cerulean;
+    border: 0px;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    
+}
+
+.hero{
+    background: url(../images/cover.jpg) center center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    padding: 0 15px;
+    position: relative;
+    
+    .hero--text {
+        width: 600px;
+        @include text-style;
+        color: $white;
+        position: absolute;
+        bottom: 143px;
+        left: 50%;
+        transform: translateX(-50%);
+        
+        & h1{
+            text-transform: uppercase;
+        }
+
+    }
+
+    .hero--btn {
+        height: 45px;
+        width: 45px;
+        background: $white;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 53px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
