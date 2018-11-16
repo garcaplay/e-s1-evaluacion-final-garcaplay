@@ -47,7 +47,8 @@
             width: 290px;
 
             @media all and (min-width: 768px){
-                @include header-section---tablet(); 
+                @include header-section---tablet();
+                width: 690px;
             }
 
             @media all and (min-width: 1280px){
