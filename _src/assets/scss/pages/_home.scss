@@ -192,6 +192,7 @@
                 @include button-text---white();
                 position: absolute;
                 bottom: 60px;
+                outline: 0;
                 transition: transform ease 1s;
 
                     &:hover{
