@@ -1,210 +1,216 @@
 .main {
-   position: relative; 
-}
+    position: relative; 
 
-.main--description{
-    padding: 30px 15px 45px;
-    margin: 0 auto;
-    height: 376px;
-    max-width: 730px;
-    background-color: $white;
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-
-    @media all and (min-width: 768px){
-        height: 330px;
-        padding: 30px 39px 45px;  
-      }
-
-    @media all and (min-width: 1280px){
-        height: 360px;
-        padding-top:60px; 
-        padding-bottom: 60px;
-        margin: 0 auto; 
-    }
-
-    & h6{
-        margin: 0;
-        @include category();
-
-        @media all and (min-width: 1280px){
-            @include category---desktop(); 
-        }
-    }
- 
-    & h2{
-        margin: 0;
-        @include header-section---mobile();
-        text-transform: capitalize;
-
-        @media all and (min-width: 768px){
-            @include header-section---tablet(); 
-        }
-
-        @media all and (min-width: 1280px){
-            @include header-section---desktop(); 
-        }
-    }
-
-    & p{
-        @include paragraph---mobile();
-
-        @media all and (min-width: 768px){
-            @include paragraph-section---tablet(); 
-        }
-    }
-
-    .main--description-btn{
-        height: 45px;
-        width: 76px;
-        border-radius: 22.5px;
-        border: solid 2px $bright-orange;
-        text-align: center;
-
-        @media all and (min-width: 768px){
-            width: 91px;  
-        }
-
-        @media all and (min-width: 1280px){
-            width: 160px;  
-        }
-
-        & a{
-            @include button-text---mobile();
-            text-decoration: none;
-            line-height: 40px;
-        }
-    }
-}
-
-.main--reasons{
-    height: 624px;
-    background-color: $light-blue;
-    padding: 30px 15px 60px 15px;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    position: relative;
-    
-    @media all and (min-width: 768px){
-        height: 397px;
-    }
-
-    @media all and (min-width: 1280px){
-        height: 427px;
-        padding: 60px 0 60px;
-    }
-
-    & h2{
-        @include header-section---mobile();
-        text-transform: capitalize;
-        text-align: center;
-        margin-top: 0;
-        margin-bottom:45px;
-        // mirar como se puede hacer esto con nth-last-child
-
-        @media all and (min-width: 768px){
-            @include header-section---tablet();
-        }
-
-        @media all and (min-width: 1280px){
-            @include header-section---desktop();
-        }
-    }
-
-    .main--reasons-grid{
-        width: 180px;
-        max-width: 1114px;
-        padding: 0 ;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-between;
-        align-items: center;
+    .main--description{
+        padding: 30px 15px 45px;
         margin: 0 auto;
+        height: 376px;
+        max-width: 730px;
+        background-color: $white;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        position: relative;
 
         @media all and (min-width: 768px){
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr; 
-            grid-gap: 0px 30px;
+            height: 330px;  
         }
 
-        & li{
-            list-style: none;
-            margin-bottom: 45px;
+        @media all and (min-width: 1280px){
+            height: 360px;
+            padding-top:60px; 
+            padding-bottom: 60px; 
+        }
+
+        & h6{
+            margin: 0;
+            @include category();
 
             @media all and (min-width: 1280px){
-                margin-bottom: 60px;
+                @include category---desktop(); 
+            }
+        }
+    
+        & h2{
+            margin: 0;
+            @include header-section---mobile();
+            text-transform: capitalize;
+            display: block;
+            width: 290px;
+
+            @media all and (min-width: 768px){
+                @include header-section---tablet(); 
             }
 
-            & h3{
-                margin:0;
-                @include subtitle-section---mobile();
+            @media all and (min-width: 1280px){
+                @include header-section---desktop(); 
+            }
+        }
+
+        & p{
+            @include paragraph---mobile();
+
+            @media all and (min-width: 768px){
+                @include paragraph-section---tablet(); 
+            }
+        }
+
+        .main--description-btn{
+            height: 45px;
+            width: 76px;
+            border-radius: 22.5px;
+            border: solid 2px $bright-orange;
+            text-align: center;
+
+            @media all and (min-width: 768px){
+                width: 91px;  
+            }
+
+            @media all and (min-width: 1280px){
+                width: 160px;  
+            }
+
+            & a{
+                @include button-text---mobile();
+                text-decoration: none;
+                line-height: 40px;
+            }
+        }
+    }
+
+    .main--reasons{
+        background-color: $light-blue;
+        display: flex;
+        justify-content: center;
+
+        .main--reasons-container{
+            height: 624px;
+            max-width: 730px;
+            padding: 30px 15px 60px 15px;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            position: relative;
+            
+            @media all and (min-width: 768px){
+                height: 397px;
+            }
+
+            @media all and (min-width: 1280px){
+                height: 427px;
+                padding: 60px 0 60px;
+            }
+
+            & h2{
+                @include header-section---mobile();
+                text-transform: capitalize;
+                text-align: center;
+                margin-top: 0;
+                margin-bottom:45px;
 
                 @media all and (min-width: 768px){
-                    margin-bottom: 14px;
+                    @include header-section---tablet();
+                }
+
+                @media all and (min-width: 1280px){
+                    @include header-section---desktop();
                 }
             }
 
-            & p{
-                margin: 0;
-                @include paragraph-2---mobile();
+            .main--reasons-grid{
+                width: 180px;
+                max-width: 1114px;
+                padding: 0 ;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0 auto;
 
                 @media all and (min-width: 768px){
-                    width: 213px;
-                    margin: auto;
-                    @include paragraph-2---tablet();
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-template-rows: 1fr; 
+                    grid-gap: 0px 30px;
+                }
+
+                & li{
+                    list-style: none;
+                    margin-bottom: 45px;
+
+                    @media all and (min-width: 1280px){
+                        margin-bottom: 60px;
+                    }
+
+                    & h3{
+                        margin:0;
+                        @include subtitle-section---mobile();
+
+                        @media all and (min-width: 768px){
+                            margin-bottom: 14px;
+                        }
+                    }
+
+                    & p{
+                        margin: 0;
+                        @include paragraph-2---mobile();
+
+                        @media all and (min-width: 768px){
+                            width: 213px;
+                            margin: auto;
+                            @include paragraph-2---tablet();
+                        }
+                    }
+                }
+            }
+
+            .main--reasons-btn{
+                width: 184px;
+                height: 45px;
+                border-radius: 22.5px;
+                border: 0px;
+                background-color: $bright-orange;
+                @include button-text---white();
+                position: absolute;
+                bottom: 60px;
+
+                @media all and (min-width: 1280px){
+                    width: 255px;
                 }
             }
         }
     }
 
-    .main--reasons-btn{
-        width: 184px;
+    .main--up {
+        width: 45px;
         height: 45px;
         border-radius: 22.5px;
-        border: 0px;
-        background-color: $bright-orange;
-        @include button-text---white();
+        background-color: $white;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
         position: absolute;
-        bottom: 60px;
+        z-index: 3;
+        top: 978px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media all and (min-width: 768px){
+            top: 727px;
+            transform: translate(-50%, -50%);
+        }
 
         @media all and (min-width: 1280px){
-            width: 255px;
+            top: 787px;
+            transform: translate(-50%, -50%);
         }
-    }
-}
 
-.main--up {
-    width: 45px;
-    height: 45px;
-    border-radius: 22.5px;
-    background-color: $white;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-    position: absolute;
-    z-index: 3;
-    top: 978px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    @media all and (min-width: 768px){
-        top: 727px;
-        transform: translate(-50%, -50%);
-    }
-
-    @media all and (min-width: 1280px){
-        top: 787px;
-        transform: translate(-50%, -50%);
-    }
-
-    .main--upbtn{
-        width: 20.6px;
-        height: 24px;
+        .main--upbtn{
+            width: 20.6px;
+            height: 24px;
+        }
     }
 }
 
