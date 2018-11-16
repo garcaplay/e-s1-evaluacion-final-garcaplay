@@ -12,7 +12,7 @@
     <body>
         <div class="page">
             <header class="header">
-                <div class="menu">
+                <div class="menu" id="header--section">
                     <button class="menu--btn"></button>
                 </div>
             </header>
@@ -22,11 +22,11 @@
 
                     <p>In hac habitasse platea dictumst.</p>
                 </div>
-                <div class="hero--btn">
-                    <img src="assets/images/ico-scroll-down.svg" alt="scroll down">
+                <div class="hero--btn"><a href="index.html#main--section"><img src="assets/images/ico-scroll-down.svg" alt="scroll down"></a>
+
                 </div>
             </div>
-            <main class="main">
+            <main class="main" id="main--section">
                 <div class="main--description">
                      <h6>Insomnia tips</h6>
 
@@ -34,33 +34,35 @@
 
                     <p>Donec accumusan, nulla ut volutpat porttitor, quam odio tempus felis,
                         at luctus ex diam nec lectus. Vivamus semper sodales rutrum.</p>
-                    <div class="btn main--description-btn"><a href="btn-text" class="">Go</a>
+                    <div class="btn main--description-btn"><a href="" class="btn-text">Go</a>
 
                     </div>
                 </div>
                 <div class="main--reasons">
-                     <h2>3 reasons to purchase</h2>
+                    <div class="main--reasons-container">
+                         <h2>3 reasons to purchase</h2>
 
-                    <ul class="main--reasons-grid">
-                        <li class="main--reasons-grid1">
-                             <h3>Ut sed metus</h3>
+                        <ul class="main--reasons-grid">
+                            <li class="main--reasons-grid1">
+                                 <h3>Ut sed metus</h3>
 
-                            <p>Lorem ipsum dolor sit amet, consecteur.</p>
-                        </li>
-                        <li class="main--reasons-grid2">
-                             <h3>Curabitur ac erat</h3>
+                                <p>Lorem ipsum dolor sit amet, consecteur.</p>
+                            </li>
+                            <li class="main--reasons-grid2">
+                                 <h3>Curabitur ac erat</h3>
 
-                            <p>Mauris mattis urna quis lorem molestie.</p>
-                        </li>
-                        <li class="main--reasons-grid3">
-                             <h3>Morbi dictum</h3>
+                                <p>Mauris mattis urna quis lorem molestie.</p>
+                            </li>
+                            <li class="main--reasons-grid3">
+                                 <h3>Morbi dictum</h3>
 
-                            <p>Aliquam in dolor et dolor tincidunt.</p>
-                        </li>
-                    </ul>
-                    <button class="btn main--reasons-btn">More reasons</button>
+                                <p>Aliquam in dolor et dolor tincidunt.</p>
+                            </li>
+                        </ul>
+                        <button class="btn main--reasons-btn">More reasons</button>
+                    </div>
                 </div>
-                <div class="main--up"> <a href="" class="btn main--upbtn"><img src="assets/images/ico-arrow.svg" alt="go up"></a>
+                <div class="main--up"> <a href="#header--section" class="btn main--upbtn"><img src="assets/images/ico-arrow.svg" alt="go up"></a>
 
                 </div>
             </main>
