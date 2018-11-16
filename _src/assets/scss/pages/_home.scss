@@ -221,23 +221,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        // animation-name: go-up;
-        // animation-duration: 2s;
-        // animation-iteration-count: infinite;
-        
-        // @keyframes go-up {
-
-        //     0% {
-        //         transform: translateX(-50%);
-        //     }
-
-        //     50% {
-        //         transform: translate(-50%, -5%);
-        //     }
-        //     100% {
-        //         transform: translate(-50%, -10%);
-        //     }
-        // }
 
         @media all and (min-width: 768px){
             top: 727px;
@@ -252,55 +235,58 @@
         .main--upbtn{
             width: 20.6px;
             height: 24px; 
+
+            &:hover{
             animation-name: go-up;
             animation-duration: 2s;
             animation-iteration-count: infinite;
             
-            @keyframes go-up {
-    
-                0% {
-                    transform: rotate(0deg);
-                }
+                @keyframes go-up {
+        
+                    0% {
+                        transform: rotate(0deg);
+                    }
 
-                5% {
-                    transform: rotate(45deg);
-                }
-    
-                10% {
-                    transform: rotate(90deg);
-                }
+                    5% {
+                        transform: rotate(45deg);
+                    }
+        
+                    10% {
+                        transform: rotate(90deg);
+                    }
 
-                15% {
-                    transform: rotate(135deg);
-                }
+                    15% {
+                        transform: rotate(135deg);
+                    }
 
-                20% {
-                    transform: rotate(180deg);
-                }
+                    20% {
+                        transform: rotate(180deg);
+                    }
 
-                25% {
-                    transform: rotate(225deg);
-                }
+                    25% {
+                        transform: rotate(225deg);
+                    }
 
-                30% {
-                    transform: rotate(270deg);
-                }
+                    30% {
+                        transform: rotate(270deg);
+                    }
 
-                35% {
-                    transform: rotate(315deg);
-                }
+                    35% {
+                        transform: rotate(315deg);
+                    }
 
-                40% {
-                    transform: rotate(360deg);
-                }
-                45% {
-                    transform: rotate(360deg);
-                    transform:scale(1.1);
-                }
+                    40% {
+                        transform: rotate(360deg);
+                    }
+                    45% {
+                        transform: rotate(360deg);
+                        transform:scale(1.1);
+                    }
 
-                100% {
-                    transform: rotate(360deg);
-                    transform:scale(1.5);
+                    100% {
+                        transform: rotate(360deg);
+                        transform:scale(1.5);
+                    }
                 }
             }
         }
