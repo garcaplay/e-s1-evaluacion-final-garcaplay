@@ -1,0 +1,70 @@
+
+.hero{
+    background: url("../images/cover.jpg") center center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    padding: 0 15px;
+    position: relative;
+    
+    .hero--text {
+        width: 290px;
+        position: absolute;
+        bottom: 143px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @media all and (min-width: 768px){
+            width: 600px;
+        }
+
+        @media all and (min-width: 1280px){
+            width: 700px;
+        }
+
+        & h1{
+            @include text-style();
+            color: $white;
+
+            @media all and (min-width: 768px){
+                @include main-header---tablet();
+            }
+        }
+
+        & p{
+            @include category---desktop();
+            line-height: normal;
+            color: $white;
+            text-align: center;
+            margin: 0;
+
+            @media all and (min-width: 768px){
+                @include paragraph-hero();
+            }
+            
+        }
+        
+        & h1{
+            text-transform: uppercase;
+
+            @media all and (min-width: 1280px){
+                @include main-header---desktop();
+                margin: 0;
+            }
+        }
+
+    }
+
+    .hero--btn {
+        height: 45px;
+        width: 45px;
+        background: $white;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 53px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
