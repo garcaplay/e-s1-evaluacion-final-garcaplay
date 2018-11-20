@@ -103,7 +103,7 @@
         justify-content: center;
 
         .main--reasons-container{
-            height: 624px;
+            // height: 624px;
             max-width: 730px;
             padding: 30px 15px 60px 15px;
             display: flex;
@@ -112,11 +112,11 @@
             position: relative;
             
             @media all and (min-width: 768px){
-                height: 397px;
+                // height: 397px;
             }
 
             @media all and (min-width: 1280px){
-                height: 427px;
+                // height: 427px;
                 padding: 60px 0 60px;
             }
 
@@ -147,11 +147,11 @@
                 margin: 0 auto;
 
                 @media all and (min-width: 768px){
-                    width: 100%;
-                    display: grid;
-                    grid-template-columns: 1fr 1fr 1fr;
-                    grid-template-rows: 1fr; 
-                    grid-gap: 0px 30px;
+                    width: 600px;
+                    background: yellow;
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: space-between;
                 }
 
                 & li{
@@ -192,7 +192,7 @@
                 background-color: $bright-orange;
                 @include button-text---white();
                 position: absolute;
-                bottom: 60px;
+                bottom: 40px;
                 outline: 0;
                 transition: transform ease 1s;
 
@@ -208,90 +208,6 @@
         }
     }
 
-    .main--up {
-        width: 45px;
-        height: 45px;
-        border-radius: 22.5px;
-        background-color: $white;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-        position: absolute;
-        z-index: 3;
-        top: 978px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        @media all and (min-width: 768px){
-            top: 727px;
-            transform: translate(-50%, -50%);
-        }
-
-        @media all and (min-width: 1280px){
-            top: 787px;
-            transform: translate(-50%, -50%);
-        }
-
-        .main--upbtn{
-            width: 20.6px;
-            height: 24px; 
-
-            &:hover{
-            animation-name: go-up;
-            animation-duration: 2s;
-            animation-iteration-count: infinite;
-            
-                @keyframes go-up {
-        
-                    0% {
-                        transform: rotate(0deg);
-                    }
-
-                    5% {
-                        transform: rotate(45deg);
-                    }
-        
-                    10% {
-                        transform: rotate(90deg);
-                    }
-
-                    15% {
-                        transform: rotate(135deg);
-                    }
-
-                    20% {
-                        transform: rotate(180deg);
-                    }
-
-                    25% {
-                        transform: rotate(225deg);
-                    }
-
-                    30% {
-                        transform: rotate(270deg);
-                    }
-
-                    35% {
-                        transform: rotate(315deg);
-                    }
-
-                    40% {
-                        transform: rotate(360deg);
-                    }
-                    45% {
-                        transform: rotate(360deg);
-                        transform:scale(1.1);
-                    }
-
-                    100% {
-                        transform: rotate(360deg);
-                        transform:scale(1.5);
-                    }
-                }
-            }
-        }
-    }
 }
 
 
